@@ -33,7 +33,6 @@ Bundle 'scrooloose/syntastic'
 """""" vim scriptes """"
 Bundle 'taglist.vim'
 Bundle 'c.vim'
-"Bundle 'comments.vim'
 
 filetype plugin indent on
 
