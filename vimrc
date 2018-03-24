@@ -6,7 +6,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-
 syntax on
 
 set encoding=utf-8
@@ -112,7 +111,6 @@ let g:ycm_collect_identifiers_from_tags_files=1 "使用ctags生成的tags文件
 let g:ycm_python_binary_path='/usr/bin/python3'
 let g:ycm_seed_identifiers_with_syntax=1		" 语法关键字补全
 let g:ycm_key_invoke_completion = '<C-Space>'	" c 全局函数补全
-"let g:ycm_open_loclist_on_ycm_diags = 0
 
 "display setting
 set scrolloff=2
