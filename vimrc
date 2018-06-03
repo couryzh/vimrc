@@ -1,11 +1,3 @@
-
-""""""""""""""""""""""""""""
-" solarized config
-""""""""""""""""""""""""""""
-syntax enable
-set background=dark
-colorscheme solarized
-
 syntax on
 
 set encoding=utf-8
@@ -26,13 +18,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 """""" git repo """""""
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 
 """""" vim scriptes """"
 Bundle 'taglist.vim'
-Bundle 'c.vim'
+"Bundle 'c.vim'
 
 filetype plugin indent on
 
@@ -98,18 +90,18 @@ nmap <leader>l <C-w>l
 nmap <leader>h <C-w>h
 
 "YouCompleteMe setting
-inoremap <expr> <CR> 	pumvisible() ? "\<C-y>" : "\<CR>"
-nnoremap <leader>jh :YcmCompleter GoToInclude<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 	"按,jd回跳转到定义
-nmap <F4>	:YcmDiags<CR>
-
-set completeopt=longest,menu
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py' "配置默认的ycm_extra_conf.py
-let g:ycm_confirm_extra_conf=0					"打开vim时不再询问是否加载ycm_extra_conf.py配置
-let g:ycm_collect_identifiers_from_tags_files=1 "使用ctags生成的tags文件
-let g:ycm_python_binary_path='/usr/bin/python3'
-let g:ycm_seed_identifiers_with_syntax=1		" 语法关键字补全
-let g:ycm_key_invoke_completion = '<C-Space>'	" c 全局函数补全
+"inoremap <expr> <CR> 	pumvisible() ? "\<C-y>" : "\<CR>"
+"nnoremap <leader>jh :YcmCompleter GoToInclude<CR>
+"nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 	"按,jd回跳转到定义
+"nmap <F4>	:YcmDiags<CR>
+"
+"set completeopt=longest,menu
+"let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py' "配置默认的ycm_extra_conf.py
+"let g:ycm_confirm_extra_conf=0					"打开vim时不再询问是否加载ycm_extra_conf.py配置
+"let g:ycm_collect_identifiers_from_tags_files=1 "使用ctags生成的tags文件
+"let g:ycm_python_binary_path='/usr/bin/python3'
+"let g:ycm_seed_identifiers_with_syntax=1		" 语法关键字补全
+"let g:ycm_key_invoke_completion = '<C-Space>'	" c 全局函数补全
 
 "display setting
 set scrolloff=2
