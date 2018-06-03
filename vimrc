@@ -1,3 +1,6 @@
+
+colorscheme zellner
+
 syntax on
 
 set encoding=utf-8
@@ -119,7 +122,7 @@ set shiftwidth=4
 set tabstop=4
 "set expandtab
 
-set foldmethod=indent
+"set foldmethod=indent
 set ignorecase smartcase
 set autoindent
 set copyindent
