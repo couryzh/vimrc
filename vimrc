@@ -70,7 +70,7 @@ let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
   set csprg=/usr/bin/cscope
-  set csto=1
+  set csto=0
   set cst
   set nocsverb
   " add any database in current directory
@@ -79,18 +79,37 @@ if has("cscope")
   endif
   set csverb
 endif
-nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>ct :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <leader>cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <leader>ci :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>ct :cs find t <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
+"nmap <leader>cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <leader>ci :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+" Using 'CTRL-spacebar' then a search type 
+" makes the vim window split horizontally, with search
+" result display in the new window
+nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-nmap <leader>l <C-w>l
-nmap <leader>h <C-w>h
+"nmap <leader>f  =G
+set splitbelow
+set splitright
+
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>h <C-w>h
+nnoremap <leader>l <C-w>l
+
 
 "YouCompleteMe setting
 "inoremap <expr> <CR> 	pumvisible() ? "\<C-y>" : "\<CR>"
