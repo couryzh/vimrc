@@ -14,21 +14,22 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vunble and initialize
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 """""" git repo """""""
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/taglist.vim'
 
 """""" vim scriptes """"
-Bundle 'taglist.vim'
-"Bundle 'c.vim'
+"Plugin 'c.vim'
 
+call vundle#end()
 filetype plugin indent on
 
 let mapleader="\<Space>"
@@ -79,29 +80,28 @@ if has("cscope")
   endif
   set csverb
 endif
-"nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
-"nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
-"nmap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
-"nmap <leader>ct :cs find t <C-R>=expand("<cword>")<CR><CR>
-"nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
-"nmap <leader>cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
-"nmap <leader>ci :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-"nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 " Using 'CTRL-spacebar' then a search type 
 " makes the vim window split horizontally, with search
 " result display in the new window
-nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+"nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+"nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+"nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-"nmap <leader>f  =G
 set splitbelow
 set splitright
 
@@ -109,7 +109,6 @@ nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
 nnoremap <leader>h <C-w>h
 nnoremap <leader>l <C-w>l
-
 
 "YouCompleteMe setting
 "inoremap <expr> <CR> 	pumvisible() ? "\<C-y>" : "\<CR>"
